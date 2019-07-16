@@ -1,0 +1,835 @@
+
+<html>
+<head>
+
+<title>ADBV.BOA VIAGEM</title>
+
+      <link rel="shortcut icon" href="../favicon.ico"> 
+      
+ <link rel="stylesheet" type="text/css" href="css/style.css" />
+<style type="text/css">
+<!--
+span.label {color:white;width:30;height:16;text-align:center;margin-top:0;background:;font:bold 13px Arial}
+span.c1 {cursor:hand;color:white;width:30;height:16;text-align:center;margin-top:0;background:#ffF;font:bold 13px Arial}
+span.c2 {cursor:hand;color:red;width:30;height:16;text-align:center;margin-top:0;background:#ffF;font:bold 13px Arial}
+span.c3 {cursor:hand;color:#b0b0b0;width:30;height:16;text-align:center;margin-top:0;background:#ffF;font:bold 12px Arial}
+-->
+</style>
+
+<script type="text/javascript">
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+function maxDays(mm, yyyy){
+var mDay;
+	if((mm == 3) || (mm == 5) || (mm == 8) || (mm == 10)){
+		mDay = 30;
+  	}
+  	else{
+  		mDay = 31
+  		if(mm == 1){
+   			if (yyyy/4 - parseInt(yyyy/4) != 0){
+   				mDay = 28
+   			}
+		   	else{
+   				mDay = 29
+  			}
+		}
+  }
+return mDay;
+}
+function changeBg(id){
+	if (eval(id).style.backgroundColor != "yellow"){
+		eval(id).style.backgroundColor = "yellow"
+	}
+	else{
+		eval(id).style.backgroundColor = "#ffffff"
+	}
+}
+function writeCalendar(){
+var now = new Date
+var dd = now.getDate()
+var mm = now.getMonth()
+var dow = now.getDay()
+var yyyy = now.getFullYear()
+var arrM = new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+var arrY = new Array()
+	for (ii=0;ii<=4;ii++){
+		arrY[ii] = yyyy - 2 + ii
+	}
+var arrD = new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat")
+
+var text = ""
+text = "<form name=calForm>"
+text += "<table border=1>"
+text += "<tr><td>"
+text += "<table width=100%><tr>"
+text += "<td align=left>"
+text += "<select name=selMonth onChange='changeCal()'>"
+	for (ii=0;ii<=11;ii++){
+		if (ii==mm){
+			text += "<option value= " + ii + " Selected>" + arrM[ii] + "</option>"
+		}
+		else{
+			text += "<option value= " + ii + ">" + arrM[ii] + "</option>"
+		}
+	}
+text += "</select>"
+text += "</td>"
+text += "<td align=right>"
+text += "<select name=selYear onChange='changeCal()'>"
+	for (ii=0;ii<=4;ii++){
+		if (ii==2){
+			text += "<option value= " + arrY[ii] + " Selected>" + arrY[ii] + "</option>"
+		}
+		else{
+			text += "<option value= " + arrY[ii] + ">" + arrY[ii] + "</option>"
+		}
+	}
+text += "</select>"
+text += "</td>"
+text += "</tr></table>"
+text += "</td></tr>"
+text += "<tr><td>"
+text += "<table border=1>"
+text += "<tr>"
+	for (ii=0;ii<=6;ii++){
+		text += "<td align=center><span class=label>" + arrD[ii] + "</span></td>"
+	}
+text += "</tr>"
+aa = 0
+	for (kk=0;kk<=5;kk++){
+		text += "<tr>"
+		for (ii=0;ii<=6;ii++){
+			text += "<td align=center><span id=sp" + aa + " onClick='changeBg(this.id)'>1</span></td>"
+			aa += 1
+		}
+		text += "</tr>"
+	}
+text += "</table>"
+text += "</td></tr>"
+text += "</table>"
+text += "</form>"
+document.write(text)
+changeCal()
+}
+function changeCal(){
+var now = new Date
+var dd = now.getDate()
+var mm = now.getMonth()
+var dow = now.getDay()
+var yyyy = now.getFullYear()
+var currM = parseInt(document.calForm.selMonth.value)
+var prevM
+	if (currM!=0){
+		prevM = currM - 1
+	}
+	else{
+		prevM = 11
+	}
+var currY = parseInt(document.calForm.selYear.value)
+var mmyyyy = new Date()
+mmyyyy.setFullYear(currY)
+mmyyyy.setMonth(currM)
+mmyyyy.setDate(1)
+var day1 = mmyyyy.getDay()
+	if (day1 == 0){
+		day1 = 7
+	}
+var arrN = new Array(41)
+var aa
+	for (ii=0;ii<day1;ii++){
+		arrN[ii] = maxDays((prevM),currY) - day1 + ii + 1
+	}
+	aa = 1
+	for (ii=day1;ii<=day1+maxDays(currM,currY)-1;ii++){
+		arrN[ii] = aa
+		aa += 1
+	}
+	aa = 1
+	for (ii=day1+maxDays(currM,currY);ii<=41;ii++){
+		arrN[ii] = aa
+		aa += 1
+	}
+	for (ii=0;ii<=41;ii++){
+		eval("sp"+ii).style.backgroundColor = "black"
+	}
+var dCount = 0
+	for (ii=0;ii<=41;ii++){
+		if (((ii<7)&&(arrN[ii]>20))||((ii>27)&&(arrN[ii]<20))){
+			eval("sp"+ii).innerHTML = arrN[ii]
+			eval("sp"+ii).className = "c3"
+		}
+		else{
+			eval("sp"+ii).innerHTML = arrN[ii]
+			if ((dCount==0)||(dCount==6)){
+				eval("sp"+ii).className = "c2"
+			}
+			else{
+				eval("sp"+ii).className = "c1"
+			}
+			if ((arrN[ii]==dd)&&(mm==currM)&&(yyyy==currY)){
+				eval("sp"+ii).style.backgroundColor="#90EE90"
+			}
+		}
+	dCount += 1
+		if (dCount>6){
+			dCount=0
+		}
+	}
+}
+//  End -->
+</script>
+
+
+<script src="js/modernizr.custom.63321.js">
+
+
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+<style type="text/css">
+
+.table{
+ -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box; 
+
+
+}
+
+.search{
+
+float: left;
+
+font-family: arial !important; /* Fonte do campo de texto*/
+
+}
+.searchbar{
+height: 20px; /*Altura da caixa*/
+width: 120px; /*largura da caixa*/
+text-align:center;
+color:#000000; /* cor da fonte da caixa*/
+background:#dcdcdc!important; /* cor de fundo da caixa */
+box-shadow: inset 1px 1px 6px  #dcdcdc; /* sombra interna*/
+font: 11px arial !important; /*fonte do texto*/
+border: 2px solid  #000000; /* borda */
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+.searchbut{
+background: url('URL DO BOTÃO');
+width:27px; /*Largura do botão*/
+height:20px; /*altura do botão*/
+border: 0;
+padding:2px;
+}
+
+::-webkit-scrollbar { width: 15px; height: 5px; }
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment  { height: 0px; display: block; background: #fff; }
+::-webkit-scrollbar-track-piece  { background: #fff; }
+::-webkit-scrollbar-thumb { height: 50px; background-color: #1E90FF; }
+::-webkit-scrollbar-thumb:hover { background: #1E90FF; }
+#body{
+ background: no-repeat scroll 0 0 transparent;
+
+}
+
+#logo{
+border: solid;
+margin:2px;
+width: 99%;
+height: 37%;
+
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+ border-radius:7px;
+ 
+
+}
+#container{
+z-index: 100000000;
+
+}
+#menu{
+
+border: solid;
+margin:2px;
+width: 99%;
+height: 9%;
+z-index: 2;
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+ border-radius:7px;
+ 
+
+}
+#esquerda{
+background-color:black;
+
+margin:3px;
+width:25%;
+height: 275%;
+float: left; 
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+ border-radius:17px;
+
+
+}
+#conteudo{
+overflow:auto;
+background-color:black;
+
+margin:3px;
+width:48.5%;
+height: 280%; 
+float: left;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+ border-radius:15px;
+
+
+}
+#direita{
+
+background-color:black;
+
+margin:3px;
+width:25%;
+height: 280%; 
+float: right;
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+ border-radius:15px;
+ 
+
+}
+
+
+#rodape{
+background-color:black;
+width:100%;
+height:200px;
+
+margin:3px;
+
+-moz-border-radius:7px;
+-webkit-border-radius:7px;
+ border-radius:20px;
+
+
+}
+#rodape1{
+background-color:black;
+width:20%%;
+margin:4px;
+float: left;
+
+}
+
+#rodape2{
+background-color:black;
+width:50%;
+margin:0px;
+float: right;
+
+
+}
+#rodape3{
+background-color:black;
+width:30%;
+margin:0px;
+float:left;
+
+
+}
+
+#rodape4{
+background-color:black;
+width:5%;
+margin:0px;
+float:left;
+
+
+}
+
+</style>
+<link href="css/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/menu.css" rel="stylesheet" type="text/css" />
+</head>
+<script type="text/javascript">
+window.alert("Bem vindo ao nosso site!")
+</script>
+
+<script type="_waudvw">
+var _wau = _wau || [];
+_wau.push(["tab", "3woi91n1mht1", "dvw", "right-middle"]);
+(function() {var s=document.createElement("script"); s.async=true;
+s.src="http://widgets.amung.us/tab.js";
+document.getElementsByTagName("head")[0].appendChild(s);
+})();
+
+</script>
+<body bgcolor="black">
+
+<div id="fb-root"></div>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+<div id="body">
+<div id ="logo"> 
+<img alt="IGREJA ASSEMBLEIA DE DEUS BELA VISTA" src="Igreja Assembleia de Deus Bela Vista.png" width="100%" height="100%">
+</div>
+<div id ="menu"> 
+<center>
+<div id="container">
+
+            <ul id="nav">
+                <li><a href="home.html">Home</a></li>
+                <li><a class="hsubs" href="#">Departamentos</a>
+                    <ul class="subs">
+                        <li><a href="crianças.html">Crianças</a></li>
+                        <li><a href="jovens.html">Jovens</a></li>
+                        <li><a href="senhoras.html">Senhoras</a></li>
+                        <li><a href="obreiros.html">Obreiros</a></li>
+                        <li><a href="missoes.html">Missões</a></li>
+                        <li><a href="ebd.html">E.B.D</a></li>
+                    </ul>
+                </li>
+                <li><a class="hsubs" href="#">Congregações</a>
+                    <ul class="subs">
+                        <li><a href="sede-regional.html">Sede Regional</a></li>
+                        <li><a href="extrema.html">Extrema</a></li>
+                        <li><a href="floresta.html">Floresta</a></li>
+                        <li><a href="maria-do-carmo.html">Maria do Carmo</a></li>
+                        <li><a href="pitombeira.html">Pitombeira</a></li>
+                        <li><a href="taperinha.html">Taperinha</a></li>
+                    </ul>
+                </li>
+                <li><a class="hsubs" href="#">Igreja</a>
+                    <ul class="subs">
+                        <li><a href="biografia.html">Biografia</a></li>
+                        <li><a href="Pastores.html">Pastores</a></li>
+                        <li><a href="imagens.html">Imagens</a></li>
+                        <li><a href="membros.html">Membros</a></li>
+                        <li><a href="agenda.html">Agenda</a></li>
+                    </ul>
+                </li>
+                <li><a class="hsubs" href="#">Música</a>
+                    <ul class="subs">
+                        <li><a href="nacionais.html">Nacionais</a></li>
+                        <li><a href="internacionais.html">Internacionais</a></li>
+                        <li><a href="radio.html">Rádios</a></li>
+                    </ul>
+                </li>
+                <li><a class="hsubs" href="#">Jogos</a>
+                    <ul class="subs">
+                        <li><a href="infantis.html">Infantil</a></li>
+                        <li><a href="adolecentes.html">Adolecentes</a></li>
+                        <li><a href="jovens1.html">Jovens</a></li>
+                        <li><a href="biblia.html">Biblia Online</a></li>
+                        
+                    </ul>
+                </li>
+                  <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="cadastro.php">Cadastro</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="crent'on.html">Crent'On</a></li>
+                <li><a href="parceiros.html">Parceiros</a></li>
+                <li><a href="home.html">Back</a></li>
+                <div id="lavalamp">
+                
+                </div>
+            </ul>
+
+        </div>
+        </center>
+</div>
+
+<div id ="esquerda" >
+
+<table   width="95%" bgcolor="black" style="
+padding: 10px;border-radius:20px; -moz-border-radius: 20px; -webkit-border-radius: 20px; margin: 5px">
+<tr><td width="100%" > 
+<br>
+<center>
+
+<h2><font color="#1E90FF" size="The Times New Home"> Crente Online</font></h2>
+<div class="support-note" >
+					
+<span class="note-ie" >Sorry, only modern browsers.</span>
+				
+</div>
+				
+			
+</header>
+			
+			
+<section class="main" >
+				
+<form class="form-1" >
+					
+<p class="field">
+						
+<input type="text" name="login" placeholder="Nome de Usuario">
+						
+<i class="icon-user icon-large">
+</i>
+					
+</p>
+						
+<p class="field">
+							
+<input type="password" name="password" placeholder="Senha">
+							
+<i class="icon-lock icon-large">
+</i>
+					
+</p>
+					
+<p class="submit">
+						
+<button type="submit" name="submit">
+<i class="icon-arrow-right icon-large"></i></button>
+					
+</p>
+				
+</form>
+			
+
+    
+
+</center>
+
+</td></tr>
+
+</table>
+<center>
+<table width="95%" bgcolor="black" style="
+padding: 10px;border-radius:20px; -moz-border-radius: 20px; -webkit-border-radius: 20px; margin: 5px;">
+<tr ><td width="100%">
+<center>
+<form method="POST" action="http://www.goocrente.com/search.asp">
+<INPUT NAME="KEYWORD" SIZE="20" >
+<input name='PESQUISAR' type='submit' value='Pesquisar'>
+</form>
+</center></td>
+</tr>
+<tr>
+<td bgcolor="black"width="100%">
+<br>
+<center><font color="#1E90FF"><h2>VISITANTES</h2></font><a href="http://www.websmultimedia.com/contador-de-visitas-gratis" title="Contador De Visitas Gratis">
+<img style="border: 0px solid; display: inline; width: 50%;" alt="contador de visitas" src="http://www.websmultimedia.com/contador-de-visitas.php?id=134287">
+</a><br><br></center>
+
+
+
+
+</td></tr>
+</table>
+<table >
+<tr><td><iframe src="http://www.facebook.com/plugins/like.php?href=http://www.facebook.com/pages/Assembleia-de-Deus-Bela-Vista-Boa-Viagem-CE/231626553629064 suaurl&layout=standard& show_faces=false&width=380&action=
+like&colorscheme=light&height=25&locale=pt_BR" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px;
+ height:30px;" allowTransparency="true"></iframe>
+ 
+ </td>
+ <td><iframe src="http://www.facebook.com/plugins/like.php?href=http://www.facebook.com/pages/Assembleia-de-Deus-Bela-Vista-Boa-Viagem-CE/231626553629064 suaurl&layout=standard&
+show_faces=false&width=380&action=recommend&colorscheme=light&height=25&locale=pt_BR" scrolling="no" frameborder="0"
+style="border:none; overflow:hidden; width:130px; height:30px;" allowTransparency="true"></iframe>
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+<table width="95%" bgcolor="black" style="
+padding: 10px;border-radius:20px; -moz-border-radius: 20px; -webkit-border-radius: 20px;margin: 2px; ">
+<tr><td>
+<center>
+<a target=blank href="http://www.internautascristaos.com.br"  >  <img border="0" alt="Internautas Cristãos" title="Internautas Cristãos" src="http://www.internautascristaos.com.br/images/logos/ic1.jpg"  ></a>
+</center>
+</td></tr>
+
+</table>
+<table width="95%" bgcolor="black" style="
+padding: 10px;border-radius:20px; -moz-border-radius: 20px; -webkit-border-radius: 20px;margin: 2px; ">
+<tr><td>
+<center>
+<a href="http://feeds.feedburner.com/~r/gospelmais/~6/1"><img src="http://feeds.feedburner.com/gospelmais.1.gif" alt="Gospel + | Notícias" style="border:0"></a><noscript><p>Powered by <a href="http://gospelmais.com.br/">Gospel +</a></p></noscript>
+</center>
+</td></tr>
+</table>
+<table width="95%" bgcolor="black" style="
+padding: 10px;border-radius:20px; -moz-border-radius: 20px; -webkit-border-radius: 20px;margin: 2px; ">
+<tr><td>
+<center>
+<iframe src="http://gospeljovens.com.br/noticias_vert.php" name="I1" width="193" marginwidth="1" height="180" marginheight="1" align="center" scrolling="No"frameborder="0" id="I3" target="_parent"> </iframe>
+            </center>
+</td></tr>
+</table>
+<table width="95%" bgcolor="black" style="
+padding: 10px;border-radius:20px; -moz-border-radius: 20px; -webkit-border-radius: 20px;margin: 2px; ">
+<tr><td>
+<center>
+<p style="margin-bottom:2px;"><a href="http://gospelmais.com.br" title="Gospel+" target="_blank"><img src="http://gospelmais.com.br/imagens/logo-gmais.gif" alt="Gospel+" title="Gospel+"></a></p><iframe src="http://noticias.gospelmais.com.br/frame?cats=4,18,10,1,12,8,5,6239,1375,7,3,9,6,5271,2&title_size=13px&text_size=10px&text_color=777777&title_color=0070A3&font_name=Tahoma&top_margin=1px&qtd=5&font_style=bold&size_img=50px&decoration=none&border_img=3px&border=n&border_color=#F2F2F2" width="95%" height="690px" frameborder="0" scrolling="no"></iframe><p style="display:none">Por <a href="http://gospelmais.com.br">Gospel+</a> - <a href="http://noticias.gospelmais.com.br">Gospel+ Noticias</a></p>
+            </center>
+</td></tr>
+</table>
+
+
+</center>
+</div>
+<div id ="conteudo" > 
+<center>
+
+<table  width="95%" >
+
+<tr><td width="10%">
+
+<center><font color = "#1E90FF""><h1>Departamento de Senhoras</h1></font></td></tr></center>
+</table>
+
+<table  width="95%"  height="90%">
+
+<tr><td><center>
+<img  src="jovens.jpg" width="90%" height="20%">
+</center></td></tr>
+<tr><td><center>
+<FONT COLOR="WHITE">
+
+Jovens fazem homenagem para todas as Mães!
+</FONT>
+</center>
+</td></tr>
+<tr><td><center>
+<tr><td><center>
+<img  src="alvorada.jpg" width="90%" height="10%">
+</center></td></tr>
+<tr><td><center>
+<FONT COLOR="WHITE">
+Grande Alvorada!
+Jovens fazem homenagem de Madrugada para suas mães!
+</FONT>
+</center>
+</td></tr>
+<tr><td><center>
+<img  src="senhoras.jpg" width="90%" height="40%">
+</center></td></tr>
+<tr><td><center>
+<FONT COLOR="WHITE">
+Louvor e Adoração com as Senhoras no culto de Campo no Curupati!
+</FONT>
+</center>
+</td></tr>
+<tr><td><center>
+<img  src="Acampamento 2013.jpg" width="90%" height="50%">
+</center></td></tr>
+<tr><td><center>
+<FONT COLOR="WHITE">
+Acampamento de Carnaval 2013 junto com os irmãos de Quixeramumbim!Foi uma benção!
+</FONT>
+</center>
+<tr><td><center>
+<img  src="crianças.jpg" width="90%" height="10%">
+</center></td></tr>
+<tr><td><center>
+<FONT COLOR="WHITE">
+Festa de Crianças em 2011!
+</FONT>
+</center>
+</td></tr>
+
+</table>
+
+</center>
+
+
+
+</div>
+
+<div id ="direita">
+<table width="95%"  height="20%" bgcolor="black" style="
+padding: 10px;border-radius:20px; -moz-border-radius: 20px; -webkit-border-radius: 20px;margin: 2px; ">
+<tr><td>
+<center>
+<font color="#1E90FF"> <h2> Calendario </h2></font>
+</center>
+
+</td></tr>
+<tr><td>
+<center>
+<script type="text/javascript">writeCalendar()</script>
+
+
+</center>
+
+</td></tr>
+
+
+</table>
+
+
+
+
+<table width="95%" bgcolor="black" style="
+padding: 10px;border-radius:20px; -moz-border-radius: 20px; -webkit-border-radius: 20px;margin: 2px; ">
+
+
+
+<tr><td>
+<center>
+<font color="#1E90FF"> <h2> PARCEIROS</h2></font>
+</center>
+</td></tr>
+<tr><td >
+<img alt="Arte Digital" src="Arte Digital.jpg" width="100%" >
+</td></tr>
+
+<tr><td >
+<br>
+<img alt="Tree" src="Tree.jpg" width="100%"height="20%" >
+</td></tr>
+
+<tr><td >
+<br>
+<img alt="Tree" src="radioo.png" width="100%" height="30%" >
+</td></tr>
+
+<tr><td >
+<br>
+<img alt="Tree" src="Shalon.jpg" width="100%" height="40%" >
+</td></tr>
+
+<tr><td >
+<br>
+<img alt="Tree" src="jadas.jpg" width="100%"  >
+</td></tr>
+
+<tr><td >
+<br>
+<img alt="Tree" src="adonai.png" width="100%"height="45%"  >
+</td></tr>
+
+<tr><td >
+<br>
+<img alt="Tree" src="raimundo.png" width="100%"height="45%"  >
+</td></tr>
+
+<tr><td >
+<br>
+<img alt="Tree" src="aparecida.png" width="100%"height="45%"  >
+</td></tr>
+<tr><td >
+<br>
+<img alt="Tree" src="wilian.png" width="100%"height="45%"  >
+</td></tr>
+
+
+<tr><td >
+<br>
+<img alt="Tree" src="anastacio.png" width="100%"height="45%"  >
+</td></tr>
+
+</table>
+
+ 
+
+</div>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br>
+<br><br><br><br><br><br><br><br>
+<br><br>
+<br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+
+<div id ="rodape">
+<center>
+<div id ="rodape1">
+
+<table  height="95%" style="border-radius:20px; -moz-border-radius: 20px; -webkit-border-radius: 20px;">
+<tr><td><h3><font color="#1E90FF">Desenvolvedores</h3></font></td></tr>
+<tr><td><center><font color="white">Kassiane</font></center></td></tr>
+<tr><td><center><font color="white">Dayana</font></center></td></tr>
+<tr><td><center><font color="white">Jessica</font></center></td></tr>
+<tr><td><center><font color="white">Jadson</font></center></td></tr>
+<tr><td><center><font color="white">Daniel</font></center></td></tr>
+
+</table>
+</div>
+<div id ="rodape3">
+<table  height="95%">
+<tr><td><h3><font color="#1E90FF">Contatos com os Desenvolvedores</h3></font></td></tr>
+<tr><td><center><font color="white">Email: kassi-kaka@hotmail.com </font></center></td></tr>
+<tr><td><center><font color="white">Email: kassi-kaka@hotmail.com </font></center></td></tr>
+<tr><td><center><font color="white">Email: kassi-kaka@hotmail.com</font></center></td></tr>
+<tr><td><center><font color="white">Email: kassi-kaka@hotmail.com</font></center></td></tr>
+<tr><td><center><font color="white">Email: kassi-kaka@hotmail.com</font></center></td></tr>
+
+</table>
+</div>
+
+<div id ="rodape4">
+<table height="95%">
+<tr><td><font color="#1E90FF"><center><h3>Apoio</h3></font></center></td></tr>
+<tr><td><center><img SRC="facebook icon.PNG" width="40px"height="40px"></center></td></tr>
+<tr><td><center><img SRC="google icon.PNG"width="40px"height="40px"></center></td></tr>
+<tr><td><center><img SRC="images.png"width="40px" height="40px"></center></td>
+
+</tr>
+</table>
+
+
+</div>
+<div id="radape2">
+<table height="95%">
+
+<tr><td><font color="#1E90FF"><h3>Contatos </h3></font></td><td><font color="#1E90FF"><h3>com a Igreja</h3></td></tr>
+
+<tr><td><font color="white">Fone:</font></td><td><font color="white">(88)9974-2300</font></td></tr>
+<tr><td><font color="white">Email:</font></td><td><font color="white">adbvboaviagem@hotmail.com</font></td></tr>
+<tr><td><font color="white">Bairro:</font></td><td><font color="white">Alto do Motor    Rua:Padre Mororó     Nº:</font></td></tr>
+
+
+</table>
+
+</div>
+</div>
+
+</div>
+
+</center>
+</body>
+</html>

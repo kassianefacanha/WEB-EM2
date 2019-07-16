@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualLightBox>
+    <Gallery version="2.5">
+        <Settings>
+            <AppName>WOW Slider</AppName>
+            <AppUrlS>WOWSlider.com</AppUrlS>
+            <AppVersion>3.8</AppVersion>
+            <AutoPlay>true</AutoPlay>
+            <Captions>true</Captions>
+            <CaptionsEffect>move</CaptionsEffect>
+            <Controls>true</Controls>
+            <GalleryName>kassi</GalleryName>
+            <GallerySuffix>1</GallerySuffix>
+            <HtmlCharset>UTF-8</HtmlCharset>
+            <ImageAspectRatio>true</ImageAspectRatio>
+            <ImageEffect>fade</ImageEffect>
+            <ImageFillColor>#FFFFFF</ImageFillColor>
+            <ImageHeight>0</ImageHeight>
+            <ImageQuality>90</ImageQuality>
+            <ImageShrink2>false</ImageShrink2>
+            <ImageStretch>true</ImageStretch>
+            <ImageTemplate>C:/Program Files/WOW Slider/templates/backgnd/vernisage/</ImageTemplate>
+            <ImageTemplateName>Vernisage</ImageTemplateName>
+            <ImageWidth>0</ImageWidth>
+            <Images>true</Images>
+            <JoomlaType>2.5</JoomlaType>
+            <OneLoop>false</OneLoop>
+            <OrderRandom>false</OrderRandom>
+            <PageBgColor>#f0f0f0</PageBgColor>
+            <Preloader>false</Preloader>
+            <PublishFileName>C:/Users/kassi/Documents/WOW Slider/Slide.html</PublishFileName>
+            <PublishIndex>Slide.html</PublishIndex>
+            <PublishPath>C:/Users/kassi/Documents/WOW Slider</PublishPath>
+            <PublishPreview>true</PublishPreview>
+            <PublishType>file</PublishType>
+            <RelativePath>false</RelativePath>
+            <ShowBullets>0</ShowBullets>
+            <ShowTooltips>true</ShowTooltips>
+            <SlideshowDelay>50</SlideshowDelay>
+            <SlideshowDuration>43</SlideshowDuration>
+            <SoundEnable>0</SoundEnable>
+            <SoundFileName></SoundFileName>
+            <StopOnHover>false</StopOnHover>
+            <TemplateName>vernisage</TemplateName>
+            <ThumbAlign>bottom</ThumbAlign>
+            <ThumbFormat>jpg</ThumbFormat>
+            <ThumbHeight>20</ThumbHeight>
+            <ThumbQuality>90</ThumbQuality>
+            <ThumbWidth>20</ThumbWidth>
+            <Thumbnails>true</Thumbnails>
+            <TooltipPos>bottom</TooltipPos>
+            <noFrame>1</noFrame>
+        </Settings>
+        <Images RelativePath="false">
+            <Image>
+                <url>C:/xampp/htdocs/Sistema/data1/images/50 anos de Bela Vista e 100 anos de Assembleia de Deus.jpg</url>
+                <title>50 anos de Bela Vista e 100 anos de Assembleia de Deus</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/Sistema/data1/images/Pastor Presidente.jpg</url>
+                <title>Pastor Presidente</title>
+            </Image>
+            <Image>
+                <url>C:/xampp/htdocs/Sistema/data1/images/Igreja Assembleia de Deus Bela Vista.jpg</url>
+                <title>Igreja Assembleia de Deus Bela Vista</title>
+            </Image>
+        </Images>
+    </Gallery>
+</VisualLightBox>

@@ -1,0 +1,212 @@
+/* Importação da fonte do Ubuntu, para uso na página */
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../fontes/Ubuntu-R.ttf");
+}
+
+/* Importação da fonte do Ubuntu (versão negritada), para uso na página */
+@font-face {
+    font-family: "Ubuntu Negrito";
+    src: url("../fontes/Ubuntu-B.ttf");
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    /* Degradê sem imagem criado pelo site Ultimate CSS Gradient Generator */
+    background: rgb(253,253,253); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(253,253,253,1) 0%, rgba(239,239,239,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(253,253,253,1)), color-stop(100%,rgba(239,239,239,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(253,253,253,1) 0%,rgba(239,239,239,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, rgba(253,253,253,1) 0%,rgba(239,239,239,1) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, rgba(253,253,253,1) 0%,rgba(239,239,239,1) 100%); /* IE10+ */
+    background: radial-gradient(center, ellipse cover, rgba(253,253,253,1) 0%,rgba(239,239,239,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#efefef',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    /* /Degradê sem imagem */
+}
+
+h1.cabecalho {
+    font-family: "Ubuntu Negrito", sans-serif;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    padding: 10px;
+    margin-top: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* Degradê sem imagem criado pelo site Ultimate CSS Gradient Generator */
+    background: rgb(122,188,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,188,255,1)), color-stop(44%,rgba(96,171,248,1)), color-stop(100%,rgba(64,150,238,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* IE10+ */
+    background: linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+    /* /Degradê sem imagem */
+}
+
+h1.rodape {
+    font: 14px "Ubuntu", sans-serif;
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    padding: 15px;
+    margin: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* Degradê sem imagem criado pelo site Ultimate CSS Gradient Generator */
+    background: rgb(122,188,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(122,188,255,1) 0%, rgba(96,171,248,1) 44%, rgba(64,150,238,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,188,255,1)), color-stop(44%,rgba(96,171,248,1)), color-stop(100%,rgba(64,150,238,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* IE10+ */
+    background: linear-gradient(top, rgba(122,188,255,1) 0%,rgba(96,171,248,1) 44%,rgba(64,150,238,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+    /* /Degradê sem imagem */
+}
+
+table {
+    box-shadow: 3px 3px 15px black;
+    border-collapse: collapse;
+    border: 2px;
+}
+
+th {
+    font-family: "Ubuntu Negrito", sans-serif;
+    background-color: silver;
+    text-shadow: 1px 1px 1px white;    
+}
+
+tr:nth-child(2n){
+    background-color: white;
+}
+
+tr:nth-child(2n+1){
+    background-color: azure;
+}
+
+tr:hover{
+    background-color: skyblue;
+}
+
+fieldset {
+    border-color: royalblue;
+    box-shadow: 3px 3px 3px black;
+}
+
+fieldset legend{
+    font-family: "Ubuntu Negrito", sans-serif;
+    color: royalblue;
+    text-shadow: 1px 1px 1px white;
+}
+
+.rotulo {
+    float: left;
+    text-align: right;
+    margin-right: 5px;
+    width: 80px;
+}
+
+table, tr, td, th{
+    /*
+    Adicionada borda preta em todos os elementos de tabela utilizados.
+    Especificada cor de borda preta, pois versões do IE até a versão 8
+    adotam como padrão a cor branca para bordas de tabela, diferente
+    da maioria dos outros navegadores, que adotam preto.
+    */
+    border: 1px solid black;
+}
+
+tfoot tr th{
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px;
+    background-color: white;
+}
+/*
+Especificada borda invisível, pois a maioria das versões do IE adotam
+como padrão uma borda azul de aproximadamente 2px, diferente da
+maioria dos outros navegadores, que não definem bordas visíveis
+ao usuário.
+*/
+img {
+    border: 0;
+}
+
+.botao_inserir{
+    vertical-align: middle;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 10px 13px 10px;
+    text-shadow: 1px 1px 1px white;
+    box-shadow: 2px 2px 2px black;
+    /* Degradê sem imagem criado pelo site Ultimate CSS Gradient Generator */
+    background: rgb(215,255,255); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(215,255,255,1) 0%, rgba(189,228,243,1) 35%, rgba(134,206,234,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(215,255,255,1)), color-stop(35%,rgba(189,228,243,1)), color-stop(100%,rgba(134,206,234,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(215,255,255,1) 0%,rgba(189,228,243,1) 35%,rgba(134,206,234,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(215,255,255,1) 0%,rgba(189,228,243,1) 35%,rgba(134,206,234,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(215,255,255,1) 0%,rgba(189,228,243,1) 35%,rgba(134,206,234,1) 100%); /* IE10+ */
+    background: linear-gradient(left, rgba(215,255,255,1) 0%,rgba(189,228,243,1) 35%,rgba(134,206,234,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7ffff', endColorstr='#86ceea',GradientType=1 ); /* IE6-9 */
+    /* /Degradê sem imagem */
+}
+/* Link normal */
+.botao_inserir:link{
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+}
+/* Link visitado anteriormente */
+.botao_inserir:visited{
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+}
+/* Link clicado com o mouse */
+.botao_inserir:active{
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+}
+/* Link com o mouse posicionado em cima */
+.botao_inserir:hover{
+    color: blue;
+    border: 1px solid black;
+    text-decoration: none;
+    /* Degradê sem imagem criado pelo site Ultimate CSS Gradient Generator */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(238,248,252,1) 35%, rgba(209,236,247,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(35%,rgba(238,248,252,1)), color-stop(100%,rgba(209,236,247,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(238,248,252,1) 35%,rgba(209,236,247,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(238,248,252,1) 35%,rgba(209,236,247,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(238,248,252,1) 35%,rgba(209,236,247,1) 100%); /* IE10+ */
+    background: linear-gradient(left, rgba(255,255,255,1) 0%,rgba(238,248,252,1) 35%,rgba(209,236,247,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1ecf7',GradientType=1 ); /* IE6-9 */
+    /* /Degradê sem imagem */
+}
+
+.imagem_botao_inserir{
+    vertical-align: middle;
+}
+
+td.nome_contato:active{
+    background-color: LightCoral;
+}
+
+.link_mobile_desktop{
+    font: 14px "Ubuntu Negrito", sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.link_mobile_desktop:link{
+    text-decoration: none;
+}
+
+.link_mobile_desktop:hover{
+    color: gray;
+    text-decoration: none;
+}

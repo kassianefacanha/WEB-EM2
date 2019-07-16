@@ -1,0 +1,121 @@
+
+#logo{
+	left: 50%;
+	border-size: 1px;
+	width: 1250px;
+	height: 200px;
+	background-color: #064;
+	position: absolute;
+	top: 0px;
+	margin-left: -625px;	
+	box-shadow: 0px 0px 15px #000;
+}
+
+#cssmenu{
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+
+
+}
+#cssmenu {
+  width: 232px;
+}
+#cssmenu ul {
+  list-style: none;
+  text-indent: 0px;
+}
+#cssmenu li {
+  margin-top: 3px;
+}
+#cssmenu a {
+  font: 12px Verdana;
+  padding: 4px;
+  color: #646464;
+  display: block;
+  padding: 6px 30px;
+  height: 20px;
+  text-decoration: none;
+  background: url(../background.gif);
+}
+#cssmenu a:hover {
+  background: url(../highlight.gif) no-repeat right;
+  padding: 6px 40px;
+}
+
+#todo{
+
+		border-size: 1px;
+	background-color:white;
+	width: 1240px;
+	height: 590px;
+	margin-top: 203px;
+	left: 50%;
+	margin-left: -619px;
+	position: absolute;	
+	box-shadow: 0px 4px 20px #000;
+}
+
+#menu{
+	border: 1;
+	border-size: 1px;
+	width: 240px;
+	height: 590px;
+	background-color:white;
+	float: left;	
+}
+
+#conteudo{
+	border: 1;
+	border-size: 1px;
+	width: 983px;
+	height: 590px;
+	float: left;
+	
+
+}
+
+#contcentro{
+	border:1;
+	border-size: 1px;
+	width: 793px;
+	height: 590px;
+	background-color:white;
+	float: left;
+	
+}
+
+#sistemas{
+	
+	border-size: 1px;
+	width: 180px;
+	height: 650px;
+	background-color:white;
+	float: right;
+	 
+}
+
+#rodarodape {
+	
+	height: 150px;
+	width: 100%;
+	bottom: 0px;
+	position: absolute;
+	left: 0px;
+	float: bottom;
+		
+}
+
+#rodape {
+	
+	background-color:white;
+	height: 250px;
+	width: 1242px;
+	left: 50.6%;
+	margin-left: -627px;
+	position: absolute;
+	
+	
+	
+	
+}
